@@ -22,7 +22,9 @@ function HomePage() {
       <div>
         <Header title="Develop. Preview. Ship. 🚀" />
         <ul>
-          {[<li>Ada Lovelace</li>, <li>Grace Hopper</li>, <li>Margaret Hamilton</li>]}
+          {names.map(name => (
+            <li>{name}</li>
+          ))}
         </ul>
       </div>
     )
