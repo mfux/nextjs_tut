@@ -10,20 +10,21 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
       const app = document.getElementById('app');
-      function Header() {
-        return <h1>Develop. Preview. Ship. 🚀</h1>
+      
+      function Header(props) {
+        return <h1>{props.title}</h1>
       }
       
       function HomePage() {
         return (
           <div>
             {/* Nesting the Header component */}
-            <Header />
+            <Header title="React 🥶 "/>
           </div>
         )
       }
       
-      ReactDOM.render(<Header />, app)
+      ReactDOM.render(<HomePage />, app)
     </script>
   </body>
 </html>
