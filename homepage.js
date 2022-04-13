@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 const app = document.getElementById('app');
       
 function Header(props) {
