@@ -1,19 +1,5 @@
-<!-- index.html -->
-<html>
-  <body>
-
-    <!-- Imports -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    
-    <!-- Babel Script -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    
-    <!-- Homepage -->
-    <div id="app"></div>
-    <script type="text/jsx">
-      const app = document.getElementById('app');
       
+      import { useState } from 'react'
       function Header(props) {
       return <h1>{props.title}</h1>
       }
@@ -21,7 +7,7 @@
       function HomePage() {
           const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
 
-          const [likes, setLikes] = React.useState(1)
+          const [likes, setLikes] = useState(1)
 
           function handleClick() {
             setLikes(likes*2)
@@ -40,8 +26,3 @@
           )
         }
 
-      ReactDOM.render(<HomePage />, app)
-    </script>
-
-  </body>
-</html>
