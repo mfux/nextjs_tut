@@ -7,8 +7,10 @@ return <h1>{props.title}</h1>
 function HomePage() {
     const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
 
+    const [likes, setLikes] = React.useState(1)
+
     function handleClick() {
-        console.log("increment like count")
+      setLikes(likes*2)
     }
     
     return (
@@ -19,7 +21,7 @@ function HomePage() {
             <li key={name}>{name}</li>
           ))}
         </ul>
-        <button onClick={handleClick}>Like!</button>
+        <button onClick={handleClick}>Likes ({likes})</button>
       </div>
     )
   }
